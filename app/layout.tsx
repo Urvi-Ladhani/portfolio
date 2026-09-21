@@ -25,10 +25,10 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Ishika_Awesome's Portfolio | macOS Interactive Desktop",
+  title: "Urvi Ladhani's Portfolio | macOS Interactive Desktop",
   description: "Interactive macOS desktop portfolio website built with Next.js 14 App Router, TypeScript, Supabase, and Framer Motion.",
-  keywords: ["Portfolio", "macOS Desktop", "Full Stack Developer", "UX Design", "Next.js", "Supabase"],
-  authors: [{ name: "Ishika_Awesome" }],
+  keywords: ["Portfolio", "macOS Desktop", "Full Stack Developer", "Software Engineer", "Next.js", "Supabase"],
+  authors: [{ name: "Urvi Ladhani" }],
 };
 
 export default function RootLayout({
@@ -45,7 +45,7 @@ export default function RootLayout({
       <body 
         className="h-full w-full overflow-hidden select-none"
         style={{
-          backgroundColor: 'var(--color-bg-page, #C9C5F5)',
+          backgroundColor: 'var(--color-bg-desktop, #FAFAFA)',
           fontFamily: 'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         }}
       >

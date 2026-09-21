@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Urvi Ladhani's Portfolio
+
+An interactive macOS-style desktop portfolio built with Next.js 14, TypeScript, Tailwind CSS, Framer Motion, and Supabase.
+
+- **Portfolio**: [urvi-ladhani.vercel.app](https://urvi-ladhani.vercel.app)
+- **GitHub**: [github.com/Urvi-Ladhani](https://github.com/Urvi-Ladhani)
+- **LinkedIn**: [linkedin.com/in/urvi-ladhani](https://linkedin.com/in/urvi-ladhani)
+- **LeetCode**: [leetcode.com/u/urvi_ladhani](https://leetcode.com/u/urvi_ladhani)
+- **Contact**: urviladhani23@gmail.com | +91 9712025610
 
 ## Getting Started
 

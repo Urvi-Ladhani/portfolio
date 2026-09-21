@@ -69,10 +69,10 @@ export default function MenuBar() {
           onClick={() => {
             openWindow('project-resume', 'Resume.pdf', {
               title: 'Resume.pdf',
-              description: 'Urvi / Ishika Curriculum Vitae - Full-Stack Developer & Software Engineer',
+              description: 'Urvi Ladhani Curriculum Vitae - Full-Stack Developer & Software Engineer',
               tech_stack: ['Next.js', 'React', 'Node.js', 'TypeScript', 'PostgreSQL', 'AI/ML'],
               thumbnail_url: null,
-              project_url: '/resume.pdf',
+              project_url: '/urvi_ladhani_resume.pdf',
               repo_url: null,
             });
           }}

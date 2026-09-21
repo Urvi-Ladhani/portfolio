@@ -51,7 +51,7 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
-            href="mailto:urviladhani.work@gmail.com"
+            href="mailto:urviladhani23@gmail.com"
             className="text-xs font-semibold text-muted-foreground hover:text-foreground flex items-center gap-1.5 transition-colors"
           >
             <FaEnvelope className="w-4 h-4" />

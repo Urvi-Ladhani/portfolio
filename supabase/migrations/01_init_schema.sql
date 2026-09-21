@@ -46,9 +46,14 @@ CREATE TABLE IF NOT EXISTS public.sticky_note (
 -- 4. SITE META TABLE (Singleton row)
 CREATE TABLE IF NOT EXISTS public.site_meta (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    owner_name TEXT NOT NULL DEFAULT 'Ishika_Awesome',
-    contact_email TEXT DEFAULT 'hello@example.com',
-    resume_url TEXT DEFAULT '/resume.pdf',
+    owner_name TEXT NOT NULL DEFAULT 'Urvi Ladhani',
+    contact_email TEXT DEFAULT 'urviladhani23@gmail.com',
+    phone TEXT DEFAULT '+91 9712025610',
+    github_url TEXT DEFAULT 'https://github.com/Urvi-Ladhani',
+    linkedin_url TEXT DEFAULT 'https://linkedin.com/in/urvi-ladhani',
+    leetcode_url TEXT DEFAULT 'https://leetcode.com/u/urvi_ladhani',
+    website_url TEXT DEFAULT 'https://urvi-ladhani.vercel.app',
+    resume_url TEXT DEFAULT '/urvi_ladhani_resume.pdf',
     updated_at TIMESTAMPTZ DEFAULT now()
 );
 
@@ -207,7 +212,7 @@ USING (bucket_id = 'project-thumbnails');
 -- Seed Desktop Items
 INSERT INTO public.desktop_items (label, type, target, position_x, position_y)
 VALUES 
-    ('Resume.pdf', 'file', '/resume.pdf', 10.0, 50.0),
+    ('Resume.pdf', 'file', '/urvi_ladhani_resume.pdf', 10.0, 50.0),
     ('About Me', 'folder', 'about', 20.0, 60.0)
 ON CONFLICT DO NOTHING;
 
@@ -270,11 +275,16 @@ VALUES (
 ON CONFLICT (id) DO NOTHING;
 
 -- Seed Site Meta
-INSERT INTO public.site_meta (id, owner_name, contact_email, resume_url)
+INSERT INTO public.site_meta (id, owner_name, contact_email, phone, github_url, linkedin_url, leetcode_url, website_url, resume_url)
 VALUES (
     '00000000-0000-0000-0000-000000000001',
-    'Ishika_Awesome',
-    'hello@example.com',
-    '/resume.pdf'
+    'Urvi Ladhani',
+    'urviladhani23@gmail.com',
+    '+91 9712025610',
+    'https://github.com/Urvi-Ladhani',
+    'https://linkedin.com/in/urvi-ladhani',
+    'https://leetcode.com/u/urvi_ladhani',
+    'https://urvi-ladhani.vercel.app',
+    '/urvi_ladhani_resume.pdf'
 )
 ON CONFLICT (id) DO NOTHING;

@@ -5,6 +5,7 @@ import {
   DesktopItem, 
   StickyNoteData, 
   SiteMeta, 
+  AboutData,
   WindowState, 
   WindowId 
 } from '@/lib/types';
@@ -13,6 +14,7 @@ import {
   DEFAULT_DESKTOP_ITEMS, 
   DEFAULT_STICKY_NOTE, 
   DEFAULT_SITE_META, 
+  DEFAULT_ABOUT,
   supabase, 
   isSupabaseConfigured 
 } from '@/lib/supabaseClient';
@@ -26,6 +28,7 @@ interface DesktopStore {
   desktopItems: DesktopItem[];
   stickyNote: StickyNoteData;
   siteMeta: SiteMeta;
+  aboutData: AboutData;
   
   // Window Management
   windows: WindowState[];
@@ -41,6 +44,8 @@ interface DesktopStore {
   setDesktopItems: (items: DesktopItem[]) => void;
   setStickyNote: (note: StickyNoteData) => void;
   setSiteMeta: (meta: SiteMeta) => void;
+  setAboutData: (data: AboutData) => void;
+  updateAboutData: (data: Partial<AboutData>) => Promise<void>;
 
   openWindow: (id: WindowId, title: string, data?: any) => void;
   closeWindow: (id: WindowId) => void;
@@ -67,6 +72,7 @@ export const useDesktopStore = create<DesktopStore>((set, get) => ({
   desktopItems: DEFAULT_DESKTOP_ITEMS,
   stickyNote: DEFAULT_STICKY_NOTE,
   siteMeta: DEFAULT_SITE_META,
+  aboutData: DEFAULT_ABOUT,
 
   windows: [],
   activeWindowId: null,
@@ -79,6 +85,7 @@ export const useDesktopStore = create<DesktopStore>((set, get) => ({
   setDesktopItems: (desktopItems) => set({ desktopItems }),
   setStickyNote: (stickyNote) => set({ stickyNote }),
   setSiteMeta: (siteMeta) => set({ siteMeta }),
+  setAboutData: (aboutData) => set({ aboutData }),
 
   openWindow: (id, title, data) => {
     const { windows, highestZIndex } = get();
@@ -243,6 +250,18 @@ export const useDesktopStore = create<DesktopStore>((set, get) => ({
     if (isSupabaseConfigured) {
       await supabase
         .from('sticky_note')
+        .upsert(updated);
+    }
+  },
+
+  updateAboutData: async (data: Partial<AboutData>) => {
+    const { aboutData } = get();
+    const updated = { ...aboutData, ...data, updated_at: new Date().toISOString() };
+    set({ aboutData: updated });
+
+    if (isSupabaseConfigured) {
+      await supabase
+        .from('about')
         .upsert(updated);
     }
   },

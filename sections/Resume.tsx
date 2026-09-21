@@ -75,7 +75,7 @@ export default function Resume() {
               <div className="text-center border-b border-border/80 pb-5 mb-5">
                 <h4 className="text-xl font-bold tracking-tight">Urvi Ladhani</h4>
                 <p className="text-xs text-muted-foreground mt-1">
-                  urviladhani.work@gmail.com | github.com/Urvi-Ladhani | linkedin.com/in/urvi-ladhani
+                  urviladhani23@gmail.com | +91 9712025610 | github.com/Urvi-Ladhani | linkedin.com/in/urvi-ladhani
                 </p>
               </div>
 

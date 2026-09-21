@@ -1,6 +1,6 @@
 // lib/supabaseClient.ts
 import { createClient } from '@supabase/supabase-js';
-import { Project, DesktopItem, StickyNoteData, SiteMeta } from './types';
+import { Project, DesktopItem, StickyNoteData, SiteMeta, AboutData } from './types';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -19,9 +19,30 @@ export const supabase = isSupabaseConfigured
 
 // Default initial data matching the reference image and SQL seed
 export const DEFAULT_SITE_META: SiteMeta = {
-  owner_name: "Ishika_Awesome",
-  contact_email: "hello@example.com",
-  resume_url: "/resume.pdf",
+  owner_name: "Urvi Ladhani",
+  contact_email: "urviladhani23@gmail.com",
+  phone: "+91 9712025610",
+  github_url: "https://github.com/Urvi-Ladhani",
+  linkedin_url: "https://linkedin.com/in/urvi-ladhani",
+  leetcode_url: "https://leetcode.com/u/urvi_ladhani",
+  website_url: "https://urvi-ladhani.vercel.app",
+  resume_url: "/urvi_ladhani_resume.pdf",
+};
+
+export const DEFAULT_ABOUT: AboutData = {
+  id: '00000000-0000-0000-0000-000000000001',
+  tagline: "Software Engineer & Full-Stack Developer",
+  bio: "Your personal bio goes here. Replace this text from the owner edit interface or Supabase.\n\nI focus on building intuitive web applications, robust backend architectures, and high-performance user experiences with modern web technologies.",
+  soft_skills: [
+    'Problem Solving',
+    'Curiosity',
+    'Consistency',
+    'Teamwork',
+    'Continuous Learning',
+  ],
+  currently: "Currently: Add your current focus here.",
+  interests: "Add your interests and things you enjoy outside technology here.",
+  photo_url: "https://api.dicebear.com/7.x/bottts/svg?seed=Urvi",
 };
 
 export const DEFAULT_STICKY_NOTE: StickyNoteData = {
@@ -43,7 +64,7 @@ export const DEFAULT_DESKTOP_ITEMS: DesktopItem[] = [
     id: 'item-resume',
     type: 'file',
     label: 'Resume.pdf',
-    target: '/resume.pdf',
+    target: '/urvi_ladhani_resume.pdf',
     position_x: 10.0,
     position_y: 50.0,
   },

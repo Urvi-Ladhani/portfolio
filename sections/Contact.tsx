@@ -70,16 +70,30 @@ export default function Contact() {
                 I am always open to discussing new opportunities, backend architecture optimization, or project collaborations. Drop me a line, and let&apos;s start a conversation!
               </p>
 
-              {/* Direct email display */}
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/40 border border-border/40 hover:bg-secondary/70 transition-colors mb-8 self-start">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center">
-                  <FaEnvelope className="w-5 h-5" />
+              {/* Direct email and phone display */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/40 border border-border/40 hover:bg-secondary/70 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                    <FaEnvelope className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Direct Email</span>
+                    <a href="mailto:urviladhani23@gmail.com" className="block text-sm font-semibold text-foreground hover:underline">
+                      urviladhani23@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Direct Email</span>
-                  <a href="mailto:urviladhani.work@gmail.com" className="block text-sm font-semibold text-foreground hover:underline">
-                    urviladhani.work@gmail.com
-                  </a>
+
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary/40 border border-border/40 hover:bg-secondary/70 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold">
+                    📞
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Phone</span>
+                    <a href="tel:+919712025610" className="block text-sm font-semibold text-foreground hover:underline">
+                      +91 9712025610
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,7 +101,7 @@ export default function Contact() {
             {/* Social profiles */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">Connect Elsewhere</h4>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3">
                 <a
                   href="https://github.com/Urvi-Ladhani"
                   target="_blank"
@@ -105,6 +119,22 @@ export default function Contact() {
                 >
                   <FaLinkedin className="w-4 h-4" />
                   LinkedIn
+                </a>
+                <a
+                  href="https://leetcode.com/u/urvi_ladhani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondary/60 hover:bg-secondary border border-border/40 text-sm font-semibold text-muted-foreground hover:text-foreground transition-all"
+                >
+                  LeetCode
+                </a>
+                <a
+                  href="https://urvi-ladhani.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-secondary/60 hover:bg-secondary border border-border/40 text-sm font-semibold text-muted-foreground hover:text-foreground transition-all"
+                >
+                  Portfolio
                 </a>
               </div>
             </div>

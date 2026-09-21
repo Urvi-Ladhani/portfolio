@@ -40,7 +40,23 @@ export interface SiteMeta {
   id?: string;
   owner_name: string;
   contact_email: string;
+  phone?: string;
+  github_url?: string;
+  linkedin_url?: string;
+  leetcode_url?: string;
+  website_url?: string;
   resume_url: string;
+  updated_at?: string;
+}
+
+export interface AboutData {
+  id?: string;
+  tagline: string;
+  bio: string;
+  soft_skills: string[];
+  currently: string;
+  interests: string;
+  photo_url: string;
   updated_at?: string;
 }
 

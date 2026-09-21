@@ -3,7 +3,7 @@ import React from 'react';
 import Desktop from '@/components/desktop/Desktop';
 
 export const metadata = {
-  title: "Ishika_Awesome's Portfolio",
+  title: "Urvi Ladhani's Portfolio",
   description: "Interactive macOS desktop portfolio experience.",
 };
 
