@@ -1,35 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Fraunces, Caveat } from "next/font/google";
+import "@/styles/tokens.css";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fraunces = Fraunces({
   subsets: ["latin"],
+  style: ["italic", "normal"],
+  weight: ["400", "500", "600"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-caveat",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Urvi Ladhani | Backend Developer & Computer Engineering Student",
-  description: "Explore the portfolio of Urvi Ladhani, a Computer Engineering Student and Backend Developer specializing in MERN stack, AI applications, and scalable systems.",
-  keywords: ["Urvi Ladhani", "Backend Developer", "MERN Stack", "Computer Engineering", "Software Engineer Portfolio", "AI Applications"],
-  authors: [{ name: "Urvi Ladhani" }],
-  openGraph: {
-    title: "Urvi Ladhani | Backend Developer & Computer Engineering Student",
-    description: "Explore the portfolio of Urvi Ladhani, a Computer Engineering Student and Backend Developer specializing in MERN stack, AI applications, and scalable systems.",
-    url: "https://github.com/Urvi-Ladhani",
-    siteName: "Urvi Ladhani Portfolio",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Urvi Ladhani | Backend Developer & Computer Engineering Student",
-    description: "Explore the portfolio of Urvi Ladhani, a Computer Engineering Student and Backend Developer specializing in MERN stack, AI applications, and scalable systems.",
-  },
+  title: "Ishika_Awesome's Portfolio | macOS Interactive Desktop",
+  description: "Interactive macOS desktop portfolio website built with Next.js 14 App Router, TypeScript, Supabase, and Framer Motion.",
+  keywords: ["Portfolio", "macOS Desktop", "Full Stack Developer", "UX Design", "Next.js", "Supabase"],
+  authors: [{ name: "Ishika_Awesome" }],
 };
 
 export default function RootLayout({
@@ -40,18 +39,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${fraunces.variable} ${caveat.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col transition-colors duration-300 bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body 
+        className="h-full w-full overflow-hidden select-none"
+        style={{
+          backgroundColor: 'var(--color-bg-page, #C9C5F5)',
+          fontFamily: 'var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        }}
+      >
+        {children}
       </body>
     </html>
   );

@@ -1,0 +1,25 @@
+/* styles/tokens.css */
+/* Visual Tokens (Locked Spec - All components read from these variables) */
+
+:root {
+  --color-bg-page: #C9C5F5;
+  --color-bg-desktop: #FAFAFA;
+  --color-grid-dot: #E4E4EA;
+  --color-menubar-bg: rgba(245, 245, 247, 0.85);
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #8A8A8E;
+  --color-accent-purple: #6C5CE7;
+  --color-accent-purple-dark: #5B4FCF;
+  --color-folder-top: #4FA6F7;
+  --color-folder-base: #2E86E0;
+  --color-sticky-bg: #FCF1A0;
+  --color-sticky-shadow: #F5E88A;
+  --color-gold: #F4B93E;
+  --color-mail-blue: #4A90E2;
+  --color-terminal-bg: #1C1C1E;
+  --color-terminal-text: #2ECC71;
+  --color-dock-bg: rgba(255, 255, 255, 0.85);
+  --color-dock-border: rgba(255, 255, 255, 0.7);
+  --color-window-border: rgba(0, 0, 0, 0.1);
+  --color-selection-blue: rgba(46, 134, 224, 0.2);
+}
